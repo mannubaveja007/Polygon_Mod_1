@@ -38,7 +38,6 @@ Setup your .env file with RPC URL's and your wallet Private Key.
 1. You first need to compile the contract:
 ```shell
 npx hardhat compile
-Once the contract is compile run following tasks to generate token, mint nfts and transfer/bridge them respectively:
 ```
 
 2. Now deploy the contract on sepolia network using the following command:
