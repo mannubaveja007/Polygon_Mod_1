@@ -26,57 +26,53 @@ function batchMintNFT(string[] memory nftURLs, string[] memory prompts) public o
     counter += numberOfTokens;
 }
 
-Batch Minting NFTs 🪙
+#### Batch Minting NFTs 🪙
 Users can batch mint NFTs on the Sepolia network using the batchMintNFT() function. This function allows the minting of multiple NFTs in one transaction.
 
-Bridging NFTs 🔄
+#### Bridging NFTs 🔄
 Once the NFTs are minted on Sepolia, they need to be bridged to Amoy using FX Portal. This involves approving the deposit and waiting for the bridge process to complete.
 
-Checking NFT Balances
+#### Checking NFT Balances
 Verify the successful bridging by checking the balance of NFTs on the Amoy network after the bridge operation.
 
-😊😊 Installing
+#### 😊😊 Installing
 Clone the Repository: Fork or clone this repository to your local system.
 
-Install Dependencies: Ensure you have Node.js installed. Install the project dependencies by running:
+#### Install Dependencies: 
+Ensure you have Node.js installed. Install the project dependencies by running:
 
-shell
-Copy code
 npm install
 Set Up Environment Variables: Create a .env file and configure it with your RPC URLs and wallet private key.
 
-Execution Steps
+#### Execution Steps
 Compile the Contract:
 
-shell
-Copy code
 npx hardhat compile
 Deploy the Contract on Sepolia Network:
 
-shell
-Copy code
 npx hardhat run scripts/deploy.js --network sepolia
 Batch Mint NFTs on Sepolia Network:
 
-shell
-Copy code
+
+
 npx hardhat run scripts/batchMint.js --network sepolia
 Approve NFT Deposit for Bridging:
 
-shell
-Copy code
+
+
 npx hardhat run scripts/approveDeposit.js --network sepolia
 Wait for the Bridging Process: Wait for 20-30 minutes for the NFTs to be bridged to the Amoy network. Once completed, copy the contract address on the Amoy network.
 
-Check NFT Balance on Amoy Network: Deploy and run getBalance.js on the Amoy network to check the total number of NFTs received:
+#### Check NFT Balance on Amoy Network: 
+Deploy and run getBalance.js on the Amoy network to check the total number of NFTs received:
 
-shell
-Copy code
+
+
 npx hardhat run scripts/getBalance.js --network amoy
-👋👋 Join in!
+#### 👋👋 Join in!
 Got a great idea? We'd love to see your contribution! Feel free to submit an issue or open a pull request. 😁😁
 
-⚠️⚠️ Help
+#### ⚠️⚠️ Help
 Ensure that you have some faucet tokens on both networks:
 
 Sepolia Faucet: Sepolia Faucet
@@ -87,4 +83,3 @@ If you encounter issues with the Solidity compiler version, please check the ver
 Hey there! I'm Mannu Baveja, the creator of this project.
 
 Metacrafter ID: bavejamannu (bavejamannu@gmail.com)
-Loom Video Link: View Loom Video
