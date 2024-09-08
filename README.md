@@ -26,6 +26,8 @@ function batchMintNFT(string[] memory nftURLs, string[] memory prompts) public o
     counter += numberOfTokens;
 }
 
+```
+
 #### Batch Minting NFTs 🪙
 Users can batch mint NFTs on the Sepolia network using the batchMintNFT() function. This function allows the minting of multiple NFTs in one transaction.
 
