@@ -1,9 +1,10 @@
 const hre = require("hardhat");
 const tokenContractJSON = require("../artifacts/contracts/StreetNft.sol/StreetNft.json");
 
-const tokenAddress = "0x75F781d52aF72893668a9c8761961432E519Ba9d"; 
+const tokenAddress = "0xd9E64195a992c20f34543705DcD74cb460Be552F"; 
 const tokenABI = tokenContractJSON.abi;
-const walletAddress = "0x843E8b1116C2AC092CC1d52ED9f2dc2C7bF23476";
+const walletAddress = "0xa399e6D0cA23c122c943C2AbD656218AcF25e860";
+
 
 async function main() {
 

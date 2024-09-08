@@ -9,7 +9,7 @@ contract StreetNft is ERC721A, Ownable {
     mapping(uint256 => string) private _tokenURIs;
     mapping(uint256 => string) private _prompts;
 
-    constructor() ERC721A("RuffledZest", "RFZ") Ownable(msg.sender){
+    constructor() ERC721A("GakedGamed", "GG") Ownable(msg.sender){
         counter = 0;
     }
 

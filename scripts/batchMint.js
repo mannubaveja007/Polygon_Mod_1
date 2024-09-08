@@ -1,26 +1,30 @@
 const tokenContractJSON = require("../artifacts/contracts/StreetNft.sol/StreetNft.json");
 require('dotenv').config();
 
-const tokenAddress = "0x0dFf840417EEE74102207d838e0606474Ef4D3e4"; // deployed address here
+const tokenAddress = "0x90BF9C7759776F38F55824f33A8d2e8bb83388bb"; // deployed address here
 const tokenABI = tokenContractJSON.abi;
-const walletAddress = "0x843E8b1116C2AC092CC1d52ED9f2dc2C7bF23476";
+const walletAddress = "0xa399e6D0cA23c122c943C2AbD656218AcF25e860";
 
 async function main() {
   const nft = await ethers.getContractAt("StreetNft", tokenAddress);
   const tokenURIs = [
-    "ipfs://QmaFPaZQdZke6obuB7WfFxhYL5GJ9JfKnKgkGqQPYpiWJs",
-    "ipfs://QmR13d94X7ewM7eNwLSUQe1MPvNueWoZ18ruJZhzTemVBp",
-    "ipfs://QmXXnzE5Y2U6QNZfHsrDQTyNvehQJu83zYvVLCFc5fQh7Q",
-    "ipfs://QmNtstnqfSm7KpptsZrZgFxEahAAwFFqJSJ6qALeG1NkaL",
-    "ipfs://QmQsD1jLcxBrkSFLcttNVqaDn9wrtUS9pQ55d1N9KLDa3Q"
+    "ipfs://QmQ7uCsgKQJMJQcoCpUgh2LovhKSDKneEJUnvNPq1B2gvm",
+    "ipfs://QmVwqG9FGZYu84SeAGHj4vf8ZBErMZFmNTbJ6ULqRFsAvv",
+    "ipfs://QmPLjEb492LSUFtDw2ivipFpYp9nh4kwiBRsJdPrx6chZ6",
+    "ipfs://QmUinmshL2tEoKQiZg7i6Kq5o7wRQXt2nzKUrMGnQ2XVkB",
+    "ipfs://QmSG3cPk3Wxv7eoWX6ms9UJJ1xUq9Lg4xyhxYDQE3kE9Xe"
   ];
 
   const prompts = [
-    "Generate an image of a Chinatown Road view, the road is realistic and reflective suggesting it was raining before but now the sky is clear. also, there are people walking on the both sides of the road. The shops and houses are traditional looking. Now one of the main characters of the picture is a Chinese boy of age around 10 years who sitting in the middle of the road with one of his leg stretched and one of the leg folded with a visible small injury on his knee suggesting that the boy fell on the road and hurt himself, now the other main character is a Chinese girl of age around 15-16 years. She is trying to help the boy. both the characters are wearing school dress. She is smiling mildly so to keep a positive attitude and to cheer up the boy. Add some Toona sinensis trees too. Make the reflections and objects realistic, just don't overdo things.",
-    "Generate an image of an Indian Road view, the road is realistic and reflective suggesting it was raining before but now the sky is clear. also, there are people walking on the both sides of the road. The shops and houses are traditional looking. Now one of the main characters of the picture is an Indian boy of age around 10 years who sitting in the middle of the road with one of his leg stretched and one of the leg folded with a visible small injury on his knee suggesting that the boy fell on the road and hurt himself, now the other main character is an Indian girl of age around 15-16 years. She is trying to help the boy. both the characters are wearing school dress. She is smiling mildly so to keep a positive attitude and to cheer up the boy. Add some Toona sinensis trees too. Make the reflections and objects realistic, just don't overdo things.",
-    "Generate an image of a Russian Road view, the road is realistic and reflective suggesting it was raining before but now the sky is clear. also, there are people walking on the both sides of the road. The shops and houses are traditional looking. Now one of the main characters of the picture is a Russian boy of age around 10 years who sitting in the middle of the road with one of his leg stretched and one of the leg folded with a visible small injury on his knee suggesting that the boy fell on the road and hurt himself, now the other main character is a Russian girl of age around 15-16 years. She is trying to help the boy. both the characters are wearing school dress. She is smiling mildly so to keep a positive attitude and to cheer up the boy. Add some Toona sinensis trees too. Make the reflections and objects realistic, just don't overdo things.",
-    "Generate an image of a London Road, the road is realistic and reflective suggesting it was raining before but now the sky is clear. also, there are people walking on the both sides of the road. The shops and houses are traditional looking. Now one of the main characters of the picture is an English boy of age around 10 years who sitting in the middle of the road with one of his leg stretched and one of the leg folded with a visible small injury on his knee suggesting that the boy fell on the road and hurt himself, now the other main character is an English girl of age around 15-16 years. She is trying to help the boy. both the characters are wearing school dress. She is smiling mildly so to keep a positive attitude and to cheer up the boy. Add some Toona sinensis trees too. Make the reflections and objects realistic, just don't overdo things.",
-    "Generate an image of an Italian Road, the road is realistic and reflective suggesting it was raining before but now the sky is clear. also, there are people walking on the both sides of the road. The shops and houses are traditional looking. Now one of the main characters of the picture is an Italian boy of age around 10 years who sitting in the middle of the road with one of his leg stretched and one of the leg folded with a visible small injury on his knee suggesting that the boy fell on the road and hurt himself, now the other main character is an Italian girl of age around 15-16 years. She is trying to help the boy. both the characters are wearing school dress. She is smiling mildly so to keep a positive attitude and to cheer up the boy. Add some Toona sinensis trees too. Make the reflections and objects realistic, just don't overdo things."
+    "Create a futuristic NFT of a bustling spaceport with neon lights and flying cars. A young alien child with a digital injury is seated on a sleek, reflective platform. A futuristic robot assistant is offering a glowing repair tool. Add holographic ads and shimmering space foliage.",
+
+    "Design a neon-drenched cyber cityscape at twilight. A 10-year-old with a holographic injury sits on a high-tech, transparent sidewalk. A 15-year-old girl in a glowing jumpsuit helps with a virtual first aid kit. Include animated digital billboards and radiant urban greenery.",
+
+    "Generate a high-tech underwater city with glowing coral and floating vehicles. A young marine creature with a digital leg injury is seated on a translucent walkway. A futuristic aquatic assistant is helping with a luminescent repair device. Add holographic sea plants and reflections.",
+
+    "Visualize a sleek, futuristic desert colony with floating domes and neon sands. A 10-year-old explorer with a digital knee injury sits on a glowing dune. A 15-year-old in a high-tech suit provides assistance using a holographic medical kit. Include illuminated alien flora and shimmering sand.",
+
+    "Craft a futuristic, neon-lit jungle with hovering trees and digital wildlife. A young adventurer with a holographic injury sits on a reflective, glowing path. A 15-year-old companion in advanced gear helps with a virtual first aid kit. Add dynamic digital foliage and vibrant light effects."
   ];
 
   await nft.batchMintNFT(tokenURIs, prompts);
